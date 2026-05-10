@@ -13,3 +13,13 @@ __v0_jsx-dev-runtime.ts
 node_modules
 .next/
 .DS_Store
+
+# Anchor / Solana build artifacts
+anchor/.anchor/
+anchor/target/*
+!anchor/target/deploy/
+anchor/target/deploy/*
+!anchor/target/deploy/voting-keypair.json
+anchor/node_modules/
+test-ledger/
+*.rs.bk
