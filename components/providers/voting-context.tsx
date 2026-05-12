@@ -99,6 +99,7 @@ function mapPoll({ publicKey, account }: PollWithKey): Poll {
 
 export function VotingProvider({ children }: { children: ReactNode }) {
   const { connection } = useConnection();
+//const { Connection } = require('@solana/web3.js');
   const anchorWallet = useAnchorWallet();
   const { publicKey } = useWallet();
 
@@ -193,7 +194,7 @@ export function VotingProvider({ children }: { children: ReactNode }) {
   // Initial load + reload when wallet/cluster changes
   useEffect(() => {
     void refreshPolls();
-  }, [refreshPolls]);
+  }, []);
 
   // Live updates via on-chain events
   useEffect(() => {

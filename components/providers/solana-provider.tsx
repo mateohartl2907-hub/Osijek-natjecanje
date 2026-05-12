@@ -29,7 +29,7 @@ function resolveEndpoint(): string {
 }
 
 export function SolanaProvider({ children }: SolanaProviderProps) {
-  const endpoint = useMemo(resolveEndpoint, []);
+  const endpoint = useMemo(() => clusterApiUrl('devnet'), []);
   const wallets = useMemo(() => [new PhantomWalletAdapter()], []);
 
   return (
